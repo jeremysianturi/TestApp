@@ -36,7 +36,7 @@ class Login : AppCompatActivity(),View.OnClickListener {
         this.window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN)
 
         // set title
-        setTitle("LOGIN")
+        setTitle("LOGINLOGINLOGIN")
 
         // define SharedFreference
         mUserPreference = UserPreference(this)
