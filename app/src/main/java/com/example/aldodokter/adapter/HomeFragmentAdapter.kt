@@ -9,14 +9,14 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.aldodokter.R
-import com.example.aldodokter.controller.activity.MyCustomAppIntro
+import com.example.aldodokter.controller.activity.DetailImage
 import com.example.aldodokter.entity.DataImage
 
 class HomeFragmentAdapter : RecyclerView.Adapter<HomeFragmentAdapter.AnimalHolder>() {
 
     private val tag : String = HomeFragmentAdapter::class.java.simpleName
     private val animal = listOf(
-        DataImage("Turtle",R.drawable.kura_kura2),
+        DataImage("Turtle",R.drawable.turtle1),
         DataImage("Sea Star",R.drawable.seastar1),
         DataImage("Plankton",R.drawable.plankton1)
 
@@ -35,7 +35,7 @@ class HomeFragmentAdapter : RecyclerView.Adapter<HomeFragmentAdapter.AnimalHolde
 //        holder.image.setImageResource(animal[position].image!!)
 
         if (name.text.equals("Turtle")){
-            holder.image.setImageResource(R.drawable.kura_kura2)
+            holder.image.setImageResource(R.drawable.turtle1)
         } else if (name.text.equals("Sea Star")){
             holder.image.setImageResource(R.drawable.seastar1)
         } else if (name.text.equals("Plankton")){
@@ -61,7 +61,7 @@ class HomeFragmentAdapter : RecyclerView.Adapter<HomeFragmentAdapter.AnimalHolde
             itemView.setOnClickListener {
                 var position: Int = getAdapterPosition()
                 val context = itemView.context
-                val intent = Intent(context, MyCustomAppIntro::class.java).apply {
+                val intent = Intent(context, DetailImage::class.java).apply {
                     putExtra("number", position)
                     putExtra("name", name.text)
                     Log.d(tag,"check value extra : \n position selected : $position \n name selected : ${name.text}")

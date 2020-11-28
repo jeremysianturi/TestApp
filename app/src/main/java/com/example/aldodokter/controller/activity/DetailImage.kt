@@ -10,7 +10,7 @@ import com.github.appintro.AppIntro
 import com.github.appintro.AppIntroFragment
 import com.github.appintro.AppIntroPageTransformerType
 
-class MyCustomAppIntro : AppIntro() {
+class DetailImage : AppIntro() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -54,21 +54,21 @@ class MyCustomAppIntro : AppIntro() {
             title = "Turtle images in the desert",
             description = "The animal that can walk very fast wk WK wk",
             backgroundColor = Color.DKGRAY,
-            imageDrawable = R.drawable.kura_kura2
+            imageDrawable = R.drawable.turtle1
 
         ))
 
         addSlide(AppIntroFragment.newInstance(
             title = "Turtle images in the sea",
             description = "The animal that can swim very fast wk WK wk",
-            imageDrawable = R.drawable.kura_kura1,
+            imageDrawable = R.drawable.turtle2,
             backgroundColor = Color.BLUE
         ))
 
         addSlide(AppIntroFragment.newInstance(
             title = "Turtle images at nowhere",
             description = "The animal that can flyk very fast wk WK wk",
-            imageDrawable = R.drawable.kura_kura3,
+            imageDrawable = R.drawable.turtle3,
             backgroundColor = Color.GRAY
         ))
     }
